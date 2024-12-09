@@ -1,0 +1,342 @@
+#main{
+    height: 100%;
+    width: 100%;
+}
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    position: relative;
+}
+nav{
+    padding: 2vw 2vw;
+    display: flex;
+    align-items: center;
+    background-color: #efeae3;
+    justify-content: space-between;
+}
+#nav_part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+#nav_part2 h4{
+    padding: 10px 20px;
+    border: 1px solid #585555;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #000000ea;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+}
+#nav_part2 a{
+    text-decoration: none;
+    color: #000000ea;
+    position: relative;
+    z-index: 9;
+}
+#nav_part2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    left: 0%;
+    bottom: -100%;
+    border-radius: 50px;
+    transition: all ease 0.4s;
+}
+#nav_part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+#nav_part2 h4:hover a{
+    color: #ffffff;
+}
+#center{
+    height: 65vh;
+    width: 100%;
+    /*background-color: #ffaa3ae1;*/
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #00000091;
+    padding-bottom: 2vh;
+}
+#left h3{
+    width: 25vw;
+    font-size: 1.7vw;
+    line-height: 2vw;
+    padding-left: 2vw;
+}
+#center h1{
+    font-size: 10vw;
+    text-align: right;
+    line-height: 8vw;
+    padding-right: 2vw;
+    padding-bottom: -5vw;
+}
+#page1 video{
+    position: relative;
+    border-radius: 30px;
+    margin-top: 55px;
+    width: 100%;
+}
+#anime1{
+    position: absolute;
+    height: 36vw;
+    width: 53vw;
+    right: 0;
+    top: 70vh;
+}
+#anime2{
+    height: 100%;
+    width: 100%;
+    background-color: #FE320A;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+}
+#anime3{
+    height: 30vw;
+    width: 30vw;
+    background-color: #FE320A;
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    animation-name: anime;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#anime4{
+    height: 30vw;
+    width: 30vw;
+    background-color: #FE320A;
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    animation-name: anime;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes anime{
+    from{
+        transform: translate(55%,2%);
+    }
+    to{
+        transform: translate(0%,10%);
+    }
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    padding: 8vw 0;
+    position: relative;
+    background-color: #efeae3;
+}
+#moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+#moving-text h1{
+    font-size: 9vw;
+    display: inline-block;
+}
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#gola{
+    background-color: #FE320A;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+#page2-bottom{
+    height: 60vh;
+    width: 100%;
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9;
+}
+#page2-bottom h1{
+    font-size: 4vw;
+    width: 70%;
+}
+#page2-bottom img{
+    height: 75%;
+    width: 75%;
+    border-radius: 9%;
+}
+#page2-bottom2{
+    padding-top: 13vw;
+    padding-right: 4vw;
+    width: 25%;
+}
+#page2-bottom p{
+    width: 75%;
+    font-size: 1.2vw;
+}
+#page2 #googy{
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    border-radius: 50%;
+    background:linear-gradient(to top right,#FE320A,#fa6610);
+    filter: blur(20px);
+    top: 62%;
+    left: 25%;
+    animation-name: anime;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes anime{
+    from{
+        transform: translate(10%,-10%) skew(0);
+    }
+    to{
+        transform: translate(-10%,10%) skew(-12deg);
+    }
+}
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+}
+#list-elems{
+    padding: 0 3vw;
+    display: flex;
+    align-items: center;
+}
+#list-elems p{
+    padding: 0.5vw;
+}
+#gola2{
+    background-color: #FE320A;
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+}
+#elem{
+    height: 125px;
+    width: 100%;
+    border-bottom: 0.5px solid #5c5c5c80;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+
+}
+#subelem{
+    z-index: 9;
+}
+#subelem h3{
+    left: 100vh;
+}
+#subelem p{
+    font-size: 3vh;
+    color: #1414142a;
+}
+#elem h2{
+    font-size: 3vw;
+    padding: 0 3vw;
+    z-index: 9;
+    position: relative;
+}
+
+#elem #overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #f5841b;
+    top: -100%;
+    transition: all ease 0.2s;
+    
+}
+#elem:hover #overlay{
+    top: 0;
+}
+#fixed-image{
+    height: 30vw;
+    width: 25vw;
+    position: fixed;
+    border-radius: 30px;
+    left: 50%;
+    top: 18%;
+    z-index: 99;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+#page5{
+    min-height: 50vh;
+    width: 100%;
+    padding: 0 3vw;
+    background-color: #efeae3;
+}
+#content{
+    padding: 0 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow-x: auto;
+}
+#tag{
+    padding: 0 3vw;
+    border-left: 0.5px solid #5c5c5c80;
+    width: 70vh;
+}
+#content::-webkit-scrollbar{
+    display: none;
+}
+#tag p{
+    width: 40vh;
+}
+#content{
+    cursor: -webkit-grab; 
+    cursor: grab;
+}
+#footer{
+    /*position: fixed;*/
+    height: 100vh;
+    width: 100%;
+    background-color: #FE320A;
+    z-index: 9;
+    /*bottom: 0;*/
+    display: flex;
+    align-items: flex-end;
+}
+#footer h1{
+    font-size: 23vw;
+}
